@@ -42,11 +42,6 @@
   .main-grid {
     width: 500px;
     height: 500px;
-    background-color: #999;
+    background-color: #fff;
     display: grid;
-    gap: 5px;
-  }
-  
-  .grid-item {
-    background-color: red;
   }

@@ -10,4 +10,13 @@ function createGrid(size) {
   mainGrid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 }
 
+
 createGrid(64);
+
+const gridItems = document.querySelectorAll('.grid-item');
+gridItems.forEach((item) => {
+  item.addEventListener('mouseenter', () => {
+    item.style.background = 'red';
+  });
+})
+
