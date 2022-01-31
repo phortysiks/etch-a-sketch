@@ -1,47 +1,93 @@
 * {
     box-sizing: border-box;
     margin: 0;
-  }
-  
-  header {
+}
+
+body {
+  background-color: #E6EEF8;
+}
+
+header {
     padding: 50px 0;
-  }
-  
-  .title {
+}
+
+.title {
     text-align: center;
-  }
-  
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.main {
+  display: flex;
+  max-width: 1100px;
+  justify-content: start;
+  margin: 0 auto;
+  align-items: center;
+  gap: 100px;
+}
+
+@media (max-width: 1200px) {
   .main {
-    display: flex;
-    max-width: 1100px;
-    justify-content: start;
-    margin: 0 auto;
-    align-items: center;
-    gap: 100px;
+    justify-content: center;
+    gap: 50px;
   }
-  
-  @media (max-width: 1200px) {
-    .main {
-      justify-content: center;
-      gap: 50px;
-    }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column-reverse;
   }
-  
-  @media (max-width: 768px) {
-    .main {
-      flex-direction: column-reverse;
-    }
-  }
-  
-  .side-picker {
-    height: 450px;
-    width: 200px;
-    background-color: #666
-  }
-  
-  .main-grid {
-    width: 500px;
-    height: 500px;
-    background-color: #fff;
-    display: grid;
-  }
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-picker {
+  height: 250px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-grid {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  border-radius: 3rem;
+  box-shadow: 0.5rem 0.5rem 10px #BCC6D2, -0.5rem -0.5rem 0.5rem #F6FAFF;
+  padding: 1.2rem;
+}
+
+#reload {
+  background-color: #E6EEF8;
+  min-width: 100px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  color: #8F949B;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0.5rem 0.5rem 10px #BCC6D2, -0.5rem -0.5rem 0.5rem #F6FAFF;
+  transition: all 250ms ease-in-out;
+}
+
+#reload:hover {
+  outline: none;
+  box-shadow: 1rem 1rem 1rem #BCC6D2, -1rem -1rem 1rem #F6FAFF;
+}
+
+.slider {
+  width: 95%;
+}
+
+.size-label {
+  padding: 1.2rem;
+  color: #8F949B;
+  font-family: 'Roboto', sans-serif;
+}
